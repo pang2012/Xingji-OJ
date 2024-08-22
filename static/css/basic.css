@@ -1,0 +1,76 @@
+
+.centerimage {
+  position: relative;
+  height: 100vh; /* 容器高度，根据需要设置 */
+}
+ 
+.welcomeimage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%); /*向上、向左移动自身高度/宽度的一半*/
+  max-width: 100%;  /*确保图片不会超过其容器 */
+  height: auto;  /*保持图片比例 */
+}
+
+.loginimage {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%); /*向上、向左移动自身高度/宽度的一半*/
+  width:1300px
+}
+
+.bkgcolor {
+  background-color: rgb(0,0,0);
+  height:314px;
+  width:314px;
+}
+
+.code-editor {
+	width: 90%;
+    height: 550px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    resize: none;
+}
+.div-class {
+  	transform: translate(740px, -640px); 
+}
+.tctm-class {
+  	transform: translate(-600px, -500px); 
+}
+.accepted-class {
+  	transform: translate(100px, 305px); 
+}
+.outputyl{
+	transform: translate(400px, -260px); 
+	padding: 3px 6px;
+	border-radius: 10px;
+}
+
+.round{
+	padding: 3px 6px;
+	border-radius: 3px;
+}
+
+.biground{
+	padding: 3px 6px;
+	border-radius: 10px;
+}
+
+
+button{
+	cursor: pointer; /* 鼠标悬停时显示指针形状 */
+}
+
+input{
+	cursor: pointer; /* 鼠标悬停时显示指针形状 */
+}
+.username{
+	margin-left: 920px;
+	margin-top:-20px;
+}
