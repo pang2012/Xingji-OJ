@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>OJ系统</title>
+		<link rel="icon" href="../images/ques.ico" type="image/x-icon">
+    	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    	<link rel="stylesheet" href="css/basic.css">
+		<script>
+			function changeImage() {
+  				document.getElementById('results').src = '../images/Accepted.jpg';
+  				document.getElementById('results').style="height:30";
+			}
+		</script>
+	</head>
+	<!--<body style="background-image: url('images/blue.jpg');background-repeat: no-repeat;background-size:cover;">-->
+	<body>
+		<div style="height:50px;width:1400px">
+			<img src="images/XINGJI_nab.png" style="height:50px;margin-top:0px;margin-left:0px"/>
+			<button onclick="location.href='/login_main_page {{username}}'" class="round" style="background-image: url('images/u1.png');background-size: cover;width:70px;height:35px;border:0"></button>
+			<button onclick="location.href='/problems {{username}}'" class="round" style="background-image: url('images/u2.png');background-size: cover;width:70px;height:35px;border:0"></button>
+			<button onclick="location.href='/rank_page {{username}}'" class="round"  style="background-image: url('images/u4.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		</div>
+		
+
+		<h1></h1>
+		<div style="background-color:#EEEEEE;height:20px;width:1455px;"></div>
+		<div style="background-color:#EEEEEE;height:630px;width:1455px;">
+			<div style="background-color:#FFFFFF;height:65px;width:720px">
+				<div style="background-color:#FFFFFF;height:20px;width:720px"></div>
+				<span style="">T1002 破解密码</span>
+			</div>
+			<div style="background-color:#EEEEEE;height:2px;width:720px;"></div>
+			<div style="background-color:#FFFFFF;height:30px;width:720px">
+				<span style="color:pink">入门+ </span>
+				<span style="color:black"> 时间限制 1000MS</span>
+			</div>
+			<div style="background-color:#FFFFFF;height:543px;width:720px">
+				<span>小X在Y岛的一个秘密洞穴里发现了一个大门。门上有一个密码锁，旁边还贴了一张纸条。已知密码的变换规律为：</br>假设纸条上写的是ABCDE：</br>1.先将AB交换，此时字符串为BACDE</br>2.再将CD交换，此时字符串为BADCE</br>3.由于字母E后面没有字母，所以最终的密码为BADCE。</br>现在输入纸条上的信息，请输出密码。</span>
+				<span></br></br>温馨提示:本题请使用Python编写。</span>
+				<h1>__________________________________________________</h1>
+				<div style="background-color:#DDFFFF;height:260px;width:300px">
+					<span>样例输入:</span>
+					<h5></h5>
+					<textarea style="width: 294px; height: 212px;" resize: none;>BADCFE</textarea>
+				</div>
+				<div style="background-color:#DDFFFF;height:260px;width:300px" class="outputyl">
+					<span>样例输出:</span>
+					<h5></h5>
+					<textarea style="width: 294px; height: 212px;" resize: none;>ABCDEF</textarea>
+				</div>
+			</div>
+			<div style="background-color:#FFFFFF;height:543px;width:720px;"class="div-class">
+				
+    			<form action="/submitpassword.py Python 1002" method="post" id="submitButton">
+        			<textarea class="code-editor" name="code"></textarea>
+        			<input type="submit" value="" style="background-image: url('images/submit.png');background-size: cover;width:93px;height:40px;border:0">
+    			</form>
+				<img id="results" class="accepted-class" style="height:30" />
+			</div>
+		</div>
+		<script>
+			document.getElementById('submitButton').addEventListener('submit', function(event) {
+			    //event.preventDefault(); // 阻止表单的默认提交行为
+			    //fetch('/submitdfs.py Python 1000')
+			    //alert("表单提交事件被触发");
+			
+			    setTimeout(() => {
+			        fetch('/getsubmit')
+			            .then(response => {
+			                if (!response.ok) {
+			                    throw new Error('网络响应异常');
+			                }
+			                return response.json(); // 假设服务器返回的是JSON格式数据
+			            })
+			            .then(data => {
+			                // 使用alert弹窗显示返回的数据
+			                alert(JSON.stringify(data)); // 将数据转换为字符串形式进行显示
+			            })
+			            .catch(error => {
+			                console.error('请求过程中遇到问题:', error);
+			                alert('请求失败: ' + error.message); // 显示错误信息
+			            });
+			    }, 2800);
+			});
+		</script>
+	</body>
+</html> 

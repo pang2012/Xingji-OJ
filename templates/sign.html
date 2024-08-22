@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>OJ系统/登陆-注册</title>
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    	<link rel="stylesheet" href="css/basic.css">
+	</head>
+	<body>
+		<img src="images/tctm.jpg" style="height:50px"/>
+		<button onclick="location.href='/main_page {{username}}'" class="round" style="background-image: url('images/u1.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<button onclick="location.href='/problems  {{username}}'" class="round" style="background-image: url('images/u2.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<button onclick="location.href='/login_page {{username}}'" class="round"  style="background-image: url('images/s3.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<span id="username">{{username}}</span>
+		<div style="width:1300px;height:702px">
+			<img src="images/signbackground.png" class="loginimage">
+			<form action="/signin">
+				<input type="text" name="username" placeholder="请输入用户名" style="margin-left: 875px;position: absolute;margin-top: 228px;height:30px;width:245px">
+				<input type="password" name="password" placeholder="请输入密码" style="margin-left: 850px;position: absolute;margin-top: 285px;height:30px;width:270px">
+
+				<input type="text" name="yzcode" placeholder="请输入8位验证码" style="margin-left: 870px;position: absolute;margin-top: 402px;height:30px;width:250px">
+				<button style="background-image: url('images/signin.png');background-size: cover;width:228px;height:50px;border:0;background-color:white;position:absolute;margin-left: 850px;margin-top: 500px"></button>
+				<span style="color:red;margin-left: 780px;margin-top: 400px;position: absolute;">{{loginmsg}}</span>
+			</form>
+			<form action="sendyzcode">
+				<input type="text" name="phone" placeholder="请输入邮箱" style="margin-left: 850px;position: absolute;margin-top: 342px;height:30px;width:210px">
+				<button style="margin-left:1080px;margin-top:348px;position:absolute" onclick="/sendyzcode">发送验证码</button>
+			</form>
+		</div>
+
+	</body>
+</html>

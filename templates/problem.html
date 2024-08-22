@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>OJ系统/题库</title>
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/basic.css">
+	</head>
+	<body>
+		<img src="images/tctm.jpg" style="height:50px"/>
+		<button onclick="location.href='/login_main_page {{username}}'" class="round" style="background-image: url('images/u1.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<button onclick="location.href='/problems {{username}}'" class="round" style="background-image: url('images/s2.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<button onclick="location.href='/rank_page {{username}}'" class="round" style="background-image: url('images/u4.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		<span class="username">{{username}}</span>
+		<h4></h4>
+		<span style="margin-left: 250px;margin-top: 130px">题目ID</span>
+		<span style="margin-left: 100px;margin-top: -37px">标题</span>
+		<span style="margin-left: 240px;margin-top: -37px">难度</span>
+		<span style="margin-left: 100px;margin-top: -37px">操作</span>
+		<span style="margin-left: 40px;margin-top: -37px">使用语言</span>
+		<div style="height:64px;background-color:#EEEEEE">
+			</br>
+			<span style="margin-left: 250px;margin-top: 60px">T1000</span>
+			<span style="margin-left: 100px;margin-top: -37px">小明上学</span>
+			<span style="margin-left: 210px;margin-top: -37px;background-color:green;color:white" class="round">普及-</span>
+			<button style="margin-left: 60px;margin-top: -37px;background-image: url('images/doit.png');background-size: cover;width:80px;height:35px;border:0" onclick="location.href='/problem 1000-{{username}}'">.</button>
+			<span style="margin-left: 20px;margin-top: -37px">Python</span>
+		</div>
+		<div style="height:64px;background-color:#FFFFFF">
+			</br>
+			<span style="margin-left: 250px;margin-top: 60px">T1001</span>
+			<span style="margin-left: 100px;margin-top: -37px">走楼梯</span>
+			<span style="margin-left: 225px;margin-top: -37px;background-color:pink;color:white" class="round">入门+</span>
+			<button style="margin-left: 55px;margin-top: -37px;background-image: url('images/doit.png');background-size: cover;width:80px;height:35px;border:0" onclick="location.href='/problem 1001-{{username}}'">.</button>
+			<span style="margin-left: 20px;margin-top: -37px">C++</span>
+		</div>
+		<div style="height:64px;background-color:#EEEEEE">
+			</br>
+			<span style="margin-left: 250px;margin-top: 60px">T1002</span>
+			<span style="margin-left: 100px;margin-top: -37px">破解密码</span>
+			<span style="margin-left: 210px;margin-top: -37px;background-color:pink;color:white" class="round">入门+</span>
+			<button style="margin-left: 55px;margin-top: -37px;background-image: url('images/doit.png');background-size: cover;width:80px;height:35px;border:0" onclick="location.href='/problem 1002-{{username}}'">.</button>
+			<span style="margin-left: 20px;margin-top: -37px">Python</span>
+		</div>
+		<div style="height:64px;background-color:#FFFFFF">
+			</br>
+			<span style="margin-left: 250px;margin-top: 60px">T1003</span>
+			<span style="margin-left: 100px;margin-top: -37px">公交换乘</span>
+			<span style="margin-left: 210px;margin-top: -37px;background-color:green;color:white" class="round">普及</span>
+			<button style="margin-left: 67px;margin-top: -37px;background-image: url('images/doit.png');background-size: cover;width:80px;height:35px;border:0" onclick="location.href='/problem 1003-{{username}}'">.</button>
+			<span style="margin-left: 20px;margin-top: -37px">C++</span>
+		</div>
+	</body>
+</html>

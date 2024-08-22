@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>OJ系统</title>
+		<link rel="icon" href="../images/ques.ico" type="image/x-icon">
+    	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    	<link rel="stylesheet" href="css/basic.css">
+		<script>
+			function changeImage() {
+  				document.getElementById('results').src = '../images/Accepted.jpg';
+  				document.getElementById('results').style="height:30";
+			}
+		</script>
+
+		<!--<script src="js/basic.js"></script>-->
+	</head>
+	<!--<body style="background-image: url('images/blue.jpg');background-repeat: no-repeat;background-size:cover;">-->
+	<body>
+		<div style="height:50px;width:1400px">
+			<img src="images/XINGJI_nab.png" style="height:50px;margin-top:0px;margin-left:0px"/>
+			<button onclick="location.href='/login_main_page {{username}}'" class="round" style="background-image: url('images/u1.png');background-size: cover;width:70px;height:35px;border:0"></button>
+			<button onclick="location.href='/problems {{username}}'" class="round" style="background-image: url('images/u2.png');background-size: cover;width:70px;height:35px;border:0"></button>
+			<button onclick="location.href='/rank_page {{username}}'" class="round"  style="background-image: url('images/u4.png');background-size: cover;width:70px;height:35px;border:0"></button>
+		</div>
+		
+
+		<h1></h1>
+		<div style="background-color:#EEEEEE;height:20px;width:1455px;"></div>
+		<div style="background-color:#EEEEEE;height:630px;width:1455px;">
+			<div style="background-color:#FFFFFF;height:65px;width:720px">
+				<div style="background-color:#FFFFFF;height:20px;width:720px"></div>
+				<span style="">T1000 小明上学</span>
+			</div>
+			<div style="background-color:#EEEEEE;height:2px;width:720px;"></div>
+			<div style="background-color:#FFFFFF;height:30px;width:720px">
+				<span style="color:green">普及- </span>
+				<span style="color:black"> 时间限制 1000MS</span>
+			</div>
+			<div style="background-color:#FFFFFF;height:543px;width:720px">
+				<span>现在有一张n*n的地图。小明站在地图的左上角，也就是(1,1)的位置，在这张地图上，学校表示为2，1代表墙，0代表街道，可通过。现在请问小明能否到达学校？如果小明可以到达，请输出True,否则输出False。</span>
+				<span></br>温馨提示:本题请用Python写，并使用广度优先搜索，不然会爆零。</span>
+				<h1>__________________________________________________</h1>
+				<div style="background-color:#DDFFFF;height:260px;width:300px" class="biground">
+					<span>样例输入:</span>
+					<h5></h5>
+					<textarea style="width: 294px; height: 212px;" resize: none;>5
+5
+0,1,1,1,0
+0,0,0,0,0
+0,1,1,1,0
+0,1,1,1,2
+1,1,1,1,1</textarea>
+				</div>
+				<div style="background-color:#DDFFFF;height:260px;width:300px" class="outputyl">
+					<span>样例输出:</span>
+					<h5></h5>
+					<textarea style="width: 294px; height: 212px;" resize: none;>True</textarea>
+				</div>
+			</div>
+			<div style="background-color:#FFFFFF;height:543px;width:720px;"class="div-class">
+				
+    			<form action="/submitdfs.py Python 1000" method="post" id="submitButton">
+        			<textarea class="code-editor" name="code"></textarea>
+        			<input type="submit" value="" style="background-image: url('images/submit.png');background-size: cover;width:93px;height:40px;border:0">
+    			</form>
+
+    			<span id="judgeresult">
+    				{{judgeresult}}
+    			</span>
+				<img id="results" class="accepted-class" style="height:30" />
+			</div>
+		</div>
+		<script>
+			document.getElementById('submitButton').addEventListener('submit', function(event) {
+			    //event.preventDefault(); // 阻止表单的默认提交行为
+			    //fetch('/submitdfs.py Python 1000')
+			    //alert("表单提交事件被触发");
+			
+			    setTimeout(() => {
+			        fetch('/getsubmit')
+			            .then(response => {
+			                if (!response.ok) {
+			                    throw new Error('网络响应异常');
+			                }
+			                return response.json(); // 假设服务器返回的是JSON格式数据
+			            })
+			            .then(data => {
+			                // 使用alert弹窗显示返回的数据
+			                alert(JSON.stringify(data)); // 将数据转换为字符串形式进行显示
+			            })
+			            .catch(error => {
+			                console.error('请求过程中遇到问题:', error);
+			                alert('请求失败: ' + error.message); // 显示错误信息
+			            });
+			    }, 2800);
+			});
+		</script>
+	</body>
+</html> 
